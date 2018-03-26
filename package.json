@@ -1,0 +1,15 @@
+{
+    "name": "postgres-proxy",
+    "version": "1.0.0",
+    "description": "Proxy for querying a Postgres database",
+    "author": "Kriss Watt <kriss@arena.net>",
+    "license": "UNLICENSED",
+    "private": true,
+    "dependencies": {
+        "express": "^4.16.3",
+        "pg": "^7.4.1"
+    },
+    "devDependencies": {
+        "eslint": "^4.19.1"
+    }
+}

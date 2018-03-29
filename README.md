@@ -22,10 +22,12 @@ __Note:__ [node-postgres](https://node-postgres.com/features/connecting) default
 
 Queries are sent as an array via POST request with `Content-Type: application/json`. They can either be a string, or an object which specifies both the query to execute and the values for any [parameters](https://node-postgres.com/features/queries#parameterized-query).
 
-```json
+```
 [
+    // Text-only; no parameters
     "SELECT * FROM contact WHERE partner_id=1",
 
+    // Object; parameterized query
     {
         "query": "SELECT * FROM partner WHERE id=$1",
         "values": [1]
@@ -35,7 +37,7 @@ Queries are sent as an array via POST request with `Content-Type: application/js
 
 The response is a JSON array containing one object for each query that was executed comprising the number of rows returned alongside the data rows:
 
-```json
+```
 [
     {
         "rowCount": 117,
@@ -53,7 +55,7 @@ The response is a JSON array containing one object for each query that was execu
 
 In the case of an error the response will contain an object with a single `error` field:
 
-```json
+```
 {
     "error": "You screwed that up somehow."
 }

@@ -1,11 +1,9 @@
 "use strict";
 
 module.exports = {
-    postgres : {
-        user     : "",
-        host     : "",
-        password : "",
-        database : "",
-        port     : 999
-    }
+    user     : "myuser",
+    host     : "mydb.host.com",
+    database : "mydb",
+    password : "password",
+    port     : 4321
 };

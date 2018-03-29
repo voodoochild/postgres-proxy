@@ -1,8 +1,10 @@
-const express = require("express");
-const { Pool, Client } = require("pg");
+const config = require("./config.js");
 
+const express = require("express");
 const app = express();
-const pool = new Pool();
+
+const { Pool, Client } = require("pg");
+const pool = new Pool(config);
 
 app.use(express.json());
 
@@ -18,7 +20,7 @@ app.post("/", (req, res) => {
 
                 let results = await Promise.all(queries.map(query => {
                     if(typeof query === "object") {
-                        return client.query(query.sql, query.values || []);
+                        return client.query(query.query, query.values || []);
                     }
 
                     return client.query(query);

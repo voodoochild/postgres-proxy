@@ -24,10 +24,8 @@ Queries are sent as an array via POST request with `Content-Type: application/js
 
 ```json
 [
-    // Text-only; no parameters
     "SELECT * FROM contact WHERE partner_id=1",
 
-    // Object; parameterized query
     {
         "query": "SELECT * FROM partner WHERE id=$1",
         "values": [1]

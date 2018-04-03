@@ -16,7 +16,7 @@ module.exports = {
 };
 ```
 
-__Note:__ [node-postgres](https://node-postgres.com/features/connecting) defaults to using environment variables (i.e. `PGUSER`, `PGHOST`, `PGPASSWORD`, `PGDATABASE`, and `PGPORT`). If this is preferable you can create a `config.js` which exports an empty object instead.
+__Note:__ [node-postgres](https://node-postgres.com/features/connecting) defaults to using environment variables (i.e. `PGUSER`, `PGHOST`, `PGPASSWORD`, `PGDATABASE`, and `PGPORT`).
 
 ## Usage
 

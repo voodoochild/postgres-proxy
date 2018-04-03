@@ -1,9 +1,10 @@
-const config = require("./config.js");
-
 const express = require("express");
 const app = express();
-
 const { Pool, Client } = require("pg");
+
+let config;
+try { config = require("./config.js"); } catch(e) {}
+
 const pool = new Pool(config);
 
 app.use(express.json());
